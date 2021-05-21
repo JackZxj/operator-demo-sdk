@@ -1,0 +1,19 @@
+domain: test.io
+layout:
+- go.kubebuilder.io/v3
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: operator-demo-sdk
+repo: operator-demo-sdk
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: test.io
+  group: demo
+  kind: Sample
+  path: operator-demo-sdk/api/v1alpha1
+  version: v1alpha1
+version: "3"
